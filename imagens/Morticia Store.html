@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- saved from url=(0117)file:///C:/Users/rapha/Documents/Documentos%20Rapha/Programa%C3%A7%C3%A3o/web/morticiaStoreNovo/index.html?pesquisa=# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Morticia Store</title>
+	<link rel="stylesheet" type="text/css" href="./Morticia Store_files/estilos.css">
+	<script type="text/javascript" src="./Morticia Store_files/jquery.min.js.download"></script>
+	<script type="text/javascript">
+		
+		function showDropBarCategorias(){
+			$("#dropBarCategorias > img").css("display","none");
+			$("#dropBarCategorias > div").css("display","inline");
+		}
+
+		function hideDropBarCategorias(){
+			$("#dropBarCategorias > img").css("display","inline");
+			$("#dropBarCategorias > div").css("display","none");
+		}
+
+		function showSearchBar(){
+			$("#searchBar").css("display","flex");
+		}
+
+		function hideSearchBar(){
+			$("#searchBar").css("display","none");
+
+		}
+
+		function addCarrinho(){
+
+			function x(){
+				return Number($("#numItemsCarrinho").val().split("")[1])+1
+			}
+
+			$("#numItemsCarrinho").text("("+ x() +")");
+		}
+
+	</script>
+</head>
+<body>
+	<header>
+		<div id="dropBarCategorias">
+			<img onclick="showDropBarCategorias()" src="./Morticia Store_files/droplist.png">
+			<div>
+				<button onclick="hideDropBarCategorias()">X</button>
+				<p>Categorias</p>
+				<hr>
+				<ul style="list-style: none;">
+					<li><a href="file:///C:/Users/rapha/Documents/Documentos%20Rapha/Programa%C3%A7%C3%A3o/web/morticiaStoreNovo/index.html?pesquisa=#">Acessórios</a></li>
+					<li><a href="file:///C:/Users/rapha/Documents/Documentos%20Rapha/Programa%C3%A7%C3%A3o/web/morticiaStoreNovo/index.html?pesquisa=#">Bottoms</a></li>
+					<li><a href="file:///C:/Users/rapha/Documents/Documentos%20Rapha/Programa%C3%A7%C3%A3o/web/morticiaStoreNovo/index.html?pesquisa=#">Camisetas</a></li>
+					<li><a href="file:///C:/Users/rapha/Documents/Documentos%20Rapha/Programa%C3%A7%C3%A3o/web/morticiaStoreNovo/index.html?pesquisa=#">Blusas</a></li>
+				</ul>
+				
+			</div>
+		</div>
+		<div id="logo">
+			<img src="./Morticia Store_files/logo.png">
+		</div>
+		<div id="pesquisa">
+			<img onclick="showSearchBar()" src="./Morticia Store_files/search.png">
+			<form id="searchBar" action="file:///C:/Users/rapha/Documents/Documentos%20Rapha/Programa%C3%A7%C3%A3o/web/morticiaStoreNovo/index.html?pesquisa=#" method="get">
+				<input type="text" name="pesquisa">
+				<button type="submit"><img src="./Morticia Store_files/search.png"></button>
+				<p onclick="hideSearchBar()">X</p>
+			</form>
+		</div>
+		<div id="userIcons">
+			<img id="user" src="./Morticia Store_files/user2.png">
+			<img id="carrinho" src="./Morticia Store_files/carrinho.png">
+			<p id="numItemsCarrinho">(NaN)</p>
+		</div>
+	</header>
+	<main>
+		<div id="corpo">
+
+			<h1>Destaques</h1>
+			<div class="boxProduto">
+				<img class="imagemProduto" src="./Morticia Store_files/camiseta.jpg">
+				<p class="nomeProduto">Camiseta Type O Negative</p>
+				<div class="divisoriaProduto">
+					<p class="precoProduto">R$ 49,99</p>
+					<label class="labelTamanhoProduto" for="tamanhoCamiseta">Tam:</label>
+					<select class="tamanhoCamiseta">
+						<option>P</option>
+						<option>PP</option>
+						<option>M</option>
+						<option>G</option>
+						<option>GG</option>
+					</select>
+				</div>
+				<div class="divisoriaProduto">
+					<button onclick="addCarrinho()">Adicionar ao carrinho</button>
+					<button>Comprar agora</button>
+				</div>
+			</div>
+
+		</div>
+	</main>
+
+</body></html>
