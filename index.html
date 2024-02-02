@@ -10,12 +10,12 @@
 		
 		function showDropBarCategorias(){
 			$("#dropBarCategorias > img").css("display","none");
-			$("#dropBarCategorias > div").css("display","inline");
+			$("#dropBarCategorias > nav").css("display","inline");
 		}
 
 		function hideDropBarCategorias(){
 			$("#dropBarCategorias > img").css("display","inline");
-			$("#dropBarCategorias > div").css("display","none");
+			$("#dropBarCategorias > nav").css("display","none");
 		}
 
 		function showSearchBar(){
@@ -42,7 +42,7 @@
 	<header>
 		<div id="dropBarCategorias">
 			<img  onclick="showDropBarCategorias()" src="imagens/droplist.png">
-			<div>
+			<nav>
 				<button onclick="hideDropBarCategorias()">X</button>
 				<p>Categorias</p>
 				<hr>
@@ -53,7 +53,7 @@
 					<li><a href="#">Blusas</a></li>
 				</ul>
 				
-			</div>
+			</nav>
 		</div>
 		<div id="logo">
 			<img src="imagens/logo.png">
@@ -96,7 +96,38 @@
 				</div>
 			</div>
 
+			<div class="boxProduto">
+				<img class="imagemProduto" src="imagens/camiseta2.jpg">
+				<p class="nomeProduto">Camiseta The Smiths</p>
+				<div class="divisoriaProduto" >
+					<p class="precoProduto" >R$ 59,99</p>
+					<label class="labelTamanhoProduto" for="tamanhoCamiseta">Tam:</label>
+					<select class="tamanhoCamiseta">
+						<option>P</option>
+						<option>PP</option>
+						<option>M</option>
+						<option>G</option>
+						<option>GG</option>
+					</select>
+				</div>
+				<div class="divisoriaProduto">
+					<button onclick="addCarrinho()">Adicionar ao carrinho</button>
+					<button>Comprar agora</button>
+				</div>
+			</div>
+
 		</div>
 	</main>
+
+	<footer>
+		<nav id="socialMediaBox">
+			<img onclick='window.open("https://facebook.com")' class="socialMediaIcon" src="imagens/fb.png">
+			<img onclick='window.open("https://instagram.com")' class="socialMediaIcon" src="imagens/ig.png">
+			<img onclick="window.open('mailto:faleconosco.morticiastore@gmail.com')" class="socialMediaIcon" src="imagens/mail.png">
+			<img onclick='window.open("https://www.tiktok.com")' class="socialMediaIcon" src="imagens/tk.png">
+			<img onclick="window.open('https://web.whatsapp.com/')" class="socialMediaIcon" src="imagens/wp.png">
+		</nav>
+		<a id="linkFooter" href="www.linkedin.com/in/raphael-rodrigues-oliveira-b5675a174"><p>© Copyright 2024 - Raphael Rodrigues Oliveira by Morticia Store</p></a>
+	</footer>
 </body>
 </html>
