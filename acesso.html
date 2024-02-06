@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Morticia Store</title>
+	<title>Morticia Store - Acesso</title>
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script type="text/javascript">
@@ -43,6 +43,21 @@
 		function hideUserBox(){
 			$("#userBox").css("display", "none");
 		}
+
+		function showLogin(){
+			$("h1").text("Login")
+			$("#corpoCadastro").css("display", "none");
+			$("#corpoLogin").css("display", "grid");
+			$("#corpo > p").replaceWith('<p style="padding-left: 20px;">Não tem uma conta?<em style="color: blue;" onclick="showCadastro()">Cadastrar</em></p>')
+		}
+
+		function showCadastro(){
+			$("h1").text("Cadastro")
+			$("#corpoLogin").css("display", "none");
+			$("#corpoCadastro").css("display", "grid");
+			$("#corpo > p").replaceWith('<p style="padding-left: 20px;">Já tem uma conta? <em style="color: blue;" onclick="showLogin()">Fazer Login</em></p>')
+		}
+
 	</script>
 </head>
 <body>
@@ -81,55 +96,43 @@
 		<div id="userBox">
 			<img id="userBoxImage" src="imagens/user2.png">
 			<nav id="userBoxLinks">
-				<a href="acesso.html">Login</a>
-				<a href="acesso.html">Cadastro</a>
+				<a href="#">Login</a>
+				<a href="#">Cadastro</a>
 			</nav>
 			<button onclick="hideUserBox()">X</button>
 		</div>
 	</header>
 	<main>
 		<div id="corpo">
+			<h1>Cadastro</h1>
+			<form id="corpoCadastro" method="post" action="index.html">
+				<label for="nome">Nome completo:</label>
+				<input type="text" id="nome" placeholder="Digite seu nome completo">
+				<label for="email">Email:</label>
+				<input type="email" id="email" placeholder="Digite seu email">
+				<label for="celular">Celular:</label>
+				<input type="tel" id="celular" placeholder="(xx) xxxxx-xxxx">
+				<label for="cep">CEP:</label>
+				<input type="text" id="cep" placeholder="xxxxx-xxx">
+				<label for="casaNum">Nº e complemento:</label>
+				<input type="text" id="casaNum" placeholder="Número e complemento">
+				<label for="senha">Senha:</label>
+				<input type="password" id="senha" placeholder="Digite uma senha">
+				<button type="submit">Cadastrar</button>
+				
+			</form>
+			
+			<form id="corpoLogin" method="post" action="index.html">
+				<label for="email">Email:</label>
+				<input type="email" id="email" placeholder="Digite seu email">
+				<label for="senha">Senha:</label>
+				<input type="password" id="senha" placeholder="Digite uma senha">
+				<button type="submit">Entrar</button>
+				
+			</form>
 
-			<h1>Destaques</h1>
-			<div class="boxProduto">
-				<img class="imagemProduto" src="imagens/camiseta.jpg">
-				<p class="nomeProduto">Camiseta Type O Negative</p>
-				<div class="divisoriaProduto" >
-					<p class="precoProduto" >R$ 49,99</p>
-					<label class="labelTamanhoProduto" for="tamanhoCamiseta">Tam:</label>
-					<select class="tamanhoCamiseta">
-						<option>P</option>
-						<option>PP</option>
-						<option>M</option>
-						<option>G</option>
-						<option>GG</option>
-					</select>
-				</div>
-				<div class="divisoriaProduto">
-					<button onclick="addCarrinho()">Adicionar ao carrinho</button>
-					<button>Comprar agora</button>
-				</div>
-			</div>
-
-			<div class="boxProduto">
-				<img class="imagemProduto" src="imagens/camiseta2.jpg">
-				<p class="nomeProduto">Camiseta The Smiths</p>
-				<div class="divisoriaProduto" >
-					<p class="precoProduto" >R$ 59,99</p>
-					<label class="labelTamanhoProduto" for="tamanhoCamiseta">Tam:</label>
-					<select class="tamanhoCamiseta">
-						<option>P</option>
-						<option>PP</option>
-						<option>M</option>
-						<option>G</option>
-						<option>GG</option>
-					</select>
-				</div>
-				<div class="divisoriaProduto">
-					<button onclick="addCarrinho()">Adicionar ao carrinho</button>
-					<button>Comprar agora</button>
-				</div>
-			</div>
+			<p style="padding-left: 20px;">Já tem uma conta? <em style="color: blue;" onclick="showLogin()">Fazer Login</em></p>
+			
 
 		</div>
 	</main>

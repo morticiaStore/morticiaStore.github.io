@@ -76,12 +76,13 @@ header{
 	text-align: right;
 	margin-right: 4%;
 	margin-left: -10%;
+	margin-top: 1%;
 }
 
 
 #pesquisa img{
 /*	position: relative;*/
-	width: 40%;
+	width: 30%;
 	margin: 0;
 
 }
@@ -93,11 +94,59 @@ header{
 }
 
 #user{
-	width: 30%;
+	width: 35%;
+}
+
+#userBox{
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 45%;
+	background-color: white;
+	padding: 10px;;
+	border: 6px solid black;
+	border-radius: 15px;
+	text-align: right;
+}
+
+
+#userBoxImage{
+	padding: 10px;
+	position: relative;
+	border-radius: 20px;;
+	background-color: black;
+	width: 25%;
+}
+
+#userBoxLinks{
+	display: flex;
+	margin-left: 5%;
+	text-align: left;
+	align-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#userBoxLinks a{
+	text-decoration: none;
+	color: #000;
+	font-weight: bolder;
+}
+
+#userBox button{
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	font-weight: bold;
+	display: flex;
+	top: 0;
+	background-color: transparent;
+	border: none;
 }
 
 #carrinho{
-	width: 40%;
+	width: 45%;
 	margin-top: 3%;
 }
 
@@ -252,6 +301,72 @@ footer{
 
 #linkFooter p{
 	margin: 0;
+}
+
+/* Cadastro */
+
+#corpoCadastro{
+	padding: 20px;
+	display: grid;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#corpoCadastro label:first-child{
+	margin-bottom: 4%;
+	margin-top: -4%;
+}
+
+#corpoCadastro label{
+	margin-bottom: 4%;
+	margin-top: 5%;
+}
+
+#corpoCadastro button{
+	background-color: #000;
+	color: white;
+	width: 50%;
+	display: grid;
+	justify-self: center;
+	margin-top: 10%;
+	margin-bottom: -4%;	
+	font-weight: bold;
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+
+}
+
+#corpoLogin{
+	display: none;
+	padding: 20px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#corpoLogin label:first-child{
+	margin-bottom: 4%;
+	margin-top: -4%;
+}
+
+#corpoLogin label{
+	margin-bottom: 4%;
+	margin-top: 5%;
+}
+
+#corpoLogin button{
+	background-color: #000;
+	color: white;
+	width: 50%;
+	display: grid;
+	justify-self: center;
+	margin-top: 10%;
+	margin-bottom: -4%;	
+	font-weight: bold;
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+
 }
 
 /*Desktop*/
