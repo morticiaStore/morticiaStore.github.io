@@ -33,3 +33,17 @@ function showUserBox(){
 function hideUserBox(){
 	$("#userBox").css("display", "none");
 }
+
+function showLogin(){
+	$("h1").text("Login")
+	$("#corpoCadastro").css("display", "none");
+	$("#corpoLogin").css("display", "grid");
+	$("#corpo > p").replaceWith('<p style="padding-left: 20px;">Não tem uma conta?<em style="color: blue;" onclick="showCadastro()"> Cadastrar</em></p>')
+}
+
+function showCadastro(){
+	$("h1").text("Cadastro")
+	$("#corpoLogin").css("display", "none");
+	$("#corpoCadastro").css("display", "grid");
+	$("#corpo > p").replaceWith('<p style="padding-left: 20px;">Já tem uma conta? <em style="color: blue;" onclick="showLogin()">Fazer Login</em></p>')
+}

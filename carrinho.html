@@ -3,10 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Morticia Store</title>
+	<title>Morticia Store - Acesso</title>
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="css/carrinho.css">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/codigos.js"></script>
+	<script type="text/javascript" src="js/codigos.js"></script>	</script>
 </head>
 <body>
 	<header>
@@ -38,7 +39,7 @@
 		</div>
 		<div id="userIcons">
 			<img onclick="showUserBox()" id="user" src="imagens/user2.png">
-			<img onclick="window.location='carrinho.html'" id="carrinho" src="imagens/carrinho.png">
+			<img id="carrinho" src="imagens/carrinho.png" onclick="window.location='carrinho.html'">
 			<p id="numItemsCarrinho">(0)</p>
 		</div>
 		<div id="userBox">
@@ -52,48 +53,59 @@
 	</header>
 	<main>
 		<div id="corpo">
+            <h1>Carrinho</h1>
 
-			<h1>Destaques</h1>
-			<div class="boxProduto">
-				<img class="imagemProduto" src="imagens/camiseta.jpg">
-				<p class="nomeProduto">Camiseta Type O Negative</p>
-				<div class="divisoriaProduto" >
-					<p class="precoProduto" >R$ 49,99</p>
-					<label class="labelTamanhoProduto" for="tamanhoCamiseta">Tam:</label>
-					<select class="tamanhoCamiseta">
-						<option>P</option>
-						<option>PP</option>
-						<option>M</option>
-						<option>G</option>
-						<option>GG</option>
-					</select>
-				</div>
-				<div class="divisoriaProduto">
-					<button onclick="addCarrinho()">Adicionar ao carrinho</button>
-					<button>Comprar agora</button>
-				</div>
-			</div>
+            <div class="boxCarrinhoProduto">
+                <div class="divTituloImagemProdutoCarrinho">
+                    <img src="imagens/camiseta.jpg">
+                    <p>Camiseta Type O Negative</p>
+                    
+                </div>
+                <div class="divQtdProdutoCarrinho">
+                    <p>Qtd:</p>
+                    <p class="qtdProdutoCarrinho">1</p>
+                    <button>-</button>
+                    <button>+</button>
+                </div>
+                <div class="divPrecoProdutoCarrinho">
+                    <p>Preço:</p>
+                    <p class="precoProdutoCarrinho">R$ 49,99</p>
+                </div>
+                <div class="divPrecoTotalProdutoCarrinho">
+                    <p>Preço total:</p>
+                    <p class="precoTotalProdutoCarrinho">R$49,99</p>
+                </div>
+            </div>
 
-			<div class="boxProduto">
-				<img class="imagemProduto" src="imagens/camiseta2.jpg">
-				<p class="nomeProduto">Camiseta The Smiths</p>
-				<div class="divisoriaProduto" >
-					<p class="precoProduto" >R$ 59,99</p>
-					<label class="labelTamanhoProduto" for="tamanhoCamiseta">Tam:</label>
-					<select class="tamanhoCamiseta">
-						<option>P</option>
-						<option>PP</option>
-						<option>M</option>
-						<option>G</option>
-						<option>GG</option>
-					</select>
-				</div>
-				<div class="divisoriaProduto">
-					<button onclick="addCarrinho()">Adicionar ao carrinho</button>
-					<button>Comprar agora</button>
-				</div>
-			</div>
+            <div class="boxCarrinhoProduto">
+                <div class="divTituloImagemProdutoCarrinho">
+                    <img src="imagens/camiseta2.jpg">
+                    <p>Camiseta The Smiths</p>
+                    
+                </div>
+                <div class="divQtdProdutoCarrinho">
+                    <p>Qtd:</p>
+                    <p class="qtdProdutoCarrinho">1</p>
+                    <button>-</button>
+                    <button>+</button>
+                </div>
+                <div class="divPrecoProdutoCarrinho">
+                    <p>Preço:</p>
+                    <p class="precoProdutoCarrinho">R$ 59,99</p>
+                </div>
+                <div class="divPrecoTotalProdutoCarrinho">
+                    <p>Preço total:</p>
+                    <p class="precoTotalProdutoCarrinho">R$59,99</p>
+                </div>
+            </div>
 
+            <div id="divTotalPedidoCarrinho">
+                <div id="subDivTotalPedidoCarrinho">
+                    <p>Total + frete:</p>
+                    <p>R$ x,xx</p>
+                </div>
+                <button>Continuar pro pedido</button>
+            </div>
 		</div>
 	</main>
 

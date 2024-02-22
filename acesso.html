@@ -5,60 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Morticia Store - Acesso</title>
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/cadastro.css">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script type="text/javascript">
-		
-		function showDropBarCategorias(){
-			$("#dropBarCategorias > img").css("display","none");
-			$("#dropBarCategorias > nav").css("display","inline");
-		}
-
-		function hideDropBarCategorias(){
-			$("#dropBarCategorias > img").css("display","inline");
-			$("#dropBarCategorias > nav").css("display","none");
-		}
-
-		function showSearchBar(){
-			$("#searchBar").css("display","flex");
-		}
-
-		function hideSearchBar(){
-			$("#searchBar").css("display","none");
-
-		}
-
-		function addCarrinho(){
-
-			function x(){
-				return Number($("#numItemsCarrinho").text().split("")[1])+1
-			}
-
-			$("#numItemsCarrinho").text("("+ x() +")");
-		}
-
-		function showUserBox(){
-			$("#userBox").css("display", "flex");
-		}
-
-		function hideUserBox(){
-			$("#userBox").css("display", "none");
-		}
-
-		function showLogin(){
-			$("h1").text("Login")
-			$("#corpoCadastro").css("display", "none");
-			$("#corpoLogin").css("display", "grid");
-			$("#corpo > p").replaceWith('<p style="padding-left: 20px;">Não tem uma conta?<em style="color: blue;" onclick="showCadastro()">Cadastrar</em></p>')
-		}
-
-		function showCadastro(){
-			$("h1").text("Cadastro")
-			$("#corpoLogin").css("display", "none");
-			$("#corpoCadastro").css("display", "grid");
-			$("#corpo > p").replaceWith('<p style="padding-left: 20px;">Já tem uma conta? <em style="color: blue;" onclick="showLogin()">Fazer Login</em></p>')
-		}
-
-	</script>
+	<script type="text/javascript" src="js/codigos.js"></script>	</script>
 </head>
 <body>
 	<header>
@@ -78,7 +27,7 @@
 			</nav>
 		</div>
 		<div id="logo">
-			<img src="imagens/logo.png">
+			<img onclick="window.location='index.html'" src="imagens/logo.png">
 		</div>
 		<div id="pesquisa">
 			<img onclick="showSearchBar()" src="imagens/search.png">
@@ -90,14 +39,14 @@
 		</div>
 		<div id="userIcons">
 			<img onclick="showUserBox()" id="user" src="imagens/user2.png">
-			<img id="carrinho" src="imagens/carrinho.png">
+			<img id="carrinho" src="imagens/carrinho.png" onclick="window.location='carrinho.html'">
 			<p id="numItemsCarrinho">(0)</p>
 		</div>
 		<div id="userBox">
 			<img id="userBoxImage" src="imagens/user2.png">
 			<nav id="userBoxLinks">
-				<a href="#">Login</a>
-				<a href="#">Cadastro</a>
+				<a href="acesso.html">Login</a>
+				<a href="acesso.html">Cadastro</a>
 			</nav>
 			<button onclick="hideUserBox()">X</button>
 		</div>

@@ -1,0 +1,63 @@
+#corpoCadastro{
+	padding: 20px;
+	display: grid;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#corpoCadastro label:first-child{
+	margin-bottom: 4%;
+	margin-top: -4%;
+}
+
+#corpoCadastro label{
+	margin-bottom: 4%;
+	margin-top: 5%;
+}
+
+#corpoCadastro button{
+	background-color: #000;
+	color: white;
+	width: 50%;
+	display: grid;
+	justify-self: center;
+	margin-top: 10%;
+	margin-bottom: -4%;	
+	font-weight: bold;
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+
+}
+
+#corpoLogin{
+	display: none;
+	padding: 20px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#corpoLogin label:first-child{
+	margin-bottom: 4%;
+	margin-top: -4%;
+}
+
+#corpoLogin label{
+	margin-bottom: 4%;
+	margin-top: 5%;
+}
+
+#corpoLogin button{
+	background-color: #000;
+	color: white;
+	width: 50%;
+	display: grid;
+	justify-self: center;
+	margin-top: 10%;
+	margin-bottom: -4%;	
+	font-weight: bold;
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+
+}
